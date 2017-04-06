@@ -18,7 +18,7 @@ public class CleanUtils {
      * @return {@code true}: 清除成功<br>{@code false}: 清除失败
      */
     public static boolean cleanInternalCache() {
-        return FileUtils.deleteFilesInDir(Utils.getContext().getCacheDir());
+        return FileUtils.deleteFilesInDir(YUtils.getContext().getCacheDir());
     }
 
     /**
@@ -28,7 +28,7 @@ public class CleanUtils {
      * @return {@code true}: 清除成功<br>{@code false}: 清除失败
      */
     public static boolean cleanInternalFiles() {
-        return FileUtils.deleteFilesInDir(Utils.getContext().getFilesDir());
+        return FileUtils.deleteFilesInDir(YUtils.getContext().getFilesDir());
     }
 
     /**
@@ -38,7 +38,7 @@ public class CleanUtils {
      * @return {@code true}: 清除成功<br>{@code false}: 清除失败
      */
     public static boolean cleanInternalDbs() {
-        return FileUtils.deleteFilesInDir(Utils.getContext().getFilesDir().getParent() + File.separator + "databases");
+        return FileUtils.deleteFilesInDir(YUtils.getContext().getFilesDir().getParent() + File.separator + "databases");
     }
 
     /**
@@ -49,7 +49,7 @@ public class CleanUtils {
      * @return {@code true}: 清除成功<br>{@code false}: 清除失败
      */
     public static boolean cleanInternalDbByName( String dbName) {
-        return Utils.getContext().deleteDatabase(dbName);
+        return YUtils.getContext().deleteDatabase(dbName);
     }
 
     /**
@@ -59,7 +59,7 @@ public class CleanUtils {
      * @return {@code true}: 清除成功<br>{@code false}: 清除失败
      */
     public static boolean cleanInternalSP() {
-        return FileUtils.deleteFilesInDir(Utils.getContext().getFilesDir().getParent() + File.separator + "shared_prefs");
+        return FileUtils.deleteFilesInDir(YUtils.getContext().getFilesDir().getParent() + File.separator + "shared_prefs");
     }
 
     /**
@@ -69,7 +69,7 @@ public class CleanUtils {
      * @return {@code true}: 清除成功<br>{@code false}: 清除失败
      */
     public static boolean cleanExternalCache() {
-        return SDCardUtils.isSDCardEnable() && FileUtils.deleteFilesInDir(Utils.getContext().getExternalCacheDir());
+        return SDCardUtils.isSDCardEnable() && FileUtils.deleteFilesInDir(YUtils.getContext().getExternalCacheDir());
     }
 
     /**

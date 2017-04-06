@@ -13,7 +13,7 @@ import java.util.Set;
  * 这是一个存储数据到本地的工具类
  */
 public class SPUtil {
-    private static final String SP_NAME = AppUtils.getAppName(Utils.getContext());
+    private static final String SP_NAME = AppUtils.getAppName(YUtils.getContext());
     private static SharedPreferences sp;
 
     /**

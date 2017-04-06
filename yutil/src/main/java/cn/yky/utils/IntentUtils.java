@@ -49,7 +49,7 @@ public class IntentUtils {
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            Uri contentUri = FileProvider.getUriForFile(Utils.getContext(), "com.your.package.fileProvider", file);
+            Uri contentUri = FileProvider.getUriForFile(YUtils.getContext(), "com.your.package.fileProvider", file);
             intent.setDataAndType(contentUri, type);
         }
         intent.setDataAndType(Uri.fromFile(file), type);
@@ -75,7 +75,7 @@ public class IntentUtils {
      * @return intent
      */
     public static Intent getLaunchAppIntent(String packageName) {
-        return Utils.getContext().getPackageManager().getLaunchIntentForPackage(packageName);
+        return YUtils.getContext().getPackageManager().getLaunchIntentForPackage(packageName);
     }
 
     /**

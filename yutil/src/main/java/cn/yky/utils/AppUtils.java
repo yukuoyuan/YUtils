@@ -90,7 +90,7 @@ public class AppUtils {
         File file = FileUtils.getFileByPath(filePath);
         if (!FileUtils.isFileExists(file)) return false;
         String command = "LD_LIBRARY_PATH=/vendor/lib:/system/lib pm install " + filePath;
-        ShellUtils.CommandResult commandResult = ShellUtils.execCmd(command, !isSystemApp(Utils.getContext()), true);
+        ShellUtils.CommandResult commandResult = ShellUtils.execCmd(command, !isSystemApp(YUtils.getContext()), true);
         return commandResult.successMsg != null && commandResult.successMsg.toLowerCase().contains("success");
     }
 
@@ -157,7 +157,7 @@ public class AppUtils {
      */
     public static void launchApp(String packageName) {
         if (isSpace(packageName)) return;
-        Utils.getContext().startActivity(IntentUtils.getLaunchAppIntent(packageName));
+        YUtils.getContext().startActivity(IntentUtils.getLaunchAppIntent(packageName));
     }
 
     /**

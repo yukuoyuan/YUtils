@@ -6,11 +6,11 @@ import android.content.Context;
  * Created by yukuoyuan on 2017/4/6.
  * 工具类初始化工具类
  */
-public class Utils {
+public class YUtils {
     private static Context context;
     private static boolean isDebug = true;
 
-    private Utils() {
+    private YUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");
     }
 
@@ -20,7 +20,7 @@ public class Utils {
      * @param context 上下文
      */
     public static void init(Context context) {
-        Utils.context = context.getApplicationContext();
+        YUtils.context = context.getApplicationContext();
     }
 
     /**

@@ -8,7 +8,7 @@ import android.util.Log;
  * 这是一个log的工具类
  */
 public class L {
-    private static boolean flag = !Utils.isDebug();
+    private static boolean flag = !YUtils.isDebug();
 
     public static void e(String tag, String text) {
         if (!flag) {
